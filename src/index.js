@@ -1,7 +1,7 @@
-import express from "express"
+import dotenv from "dotenv"
+import connectDB from "./db/index.js";
 
-const app = express()
-
-app.listen(3000,()=>{
-    console.log("server running on http://localhost:3000")
+dotenv.config({
+    path: "./env"
 })
+connectDB()
